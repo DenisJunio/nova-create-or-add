@@ -8,13 +8,13 @@
     >
         <div class="relative">
             <div ref="input"
-                @click="open"
-                @focus="open"
-                @keydown.down.prevent="open"
-                @keydown.up.prevent="open"
-                :class="{ focus: show, 'border-danger': error }"
-                class="flex items-center form-control form-input form-input-bordered pr-6"
-                :tabindex="show ? -1 : 0"
+                 @click="open"
+                 @focus="open"
+                 @keydown.down.prevent="open"
+                 @keydown.up.prevent="open"
+                 :class="{ focus: show, 'border-danger': error }"
+                 class="flex items-center form-control form-input form-input-bordered pr-6"
+                 :tabindex="show ? -1 : 0"
             >
 
                 <div
@@ -36,13 +36,13 @@
 
         <div v-if="show" ref="dropdown" class="form-input px-0 border border-60 absolute pin-t pin-l my-1 overflow-hidden" :style="{ width: inputWidth + 'px', zIndex: 2000 }">
             <div class="p-2 bg-grey-300">
-                <button 
-                dusk="create-new-resource"
-                type="button"
-                class="btn btn-default btn-secondary outline-none search-input-input w-full px-2 py-1.5 text-sm leading-normal bg-white rounded"
-                @click="createNew"
+                <button
+                    dusk="create-new-resource"
+                    type="button"
+                    class="btn btn-default btn-secondary outline-none search-input-input w-full px-2 py-1.5 text-sm leading-normal bg-white rounded"
+                    @click="createNew"
                 >
-                Create New {{ singularLabel }}
+                    Create New {{ singularLabel }}
                 </button>
             </div>
 
@@ -164,7 +164,7 @@ export default {
     },
     mounted() {
         document.addEventListener('keydown', e => {
-            if (this.show && (e.keyCode == 9 || e.keyCode == 27)) {
+            if (this.show && (e.key === '27' || e.key === 27 || e.key === '9' || e.key === 9)) {
                 setTimeout(() => this.close(), 50)
             }
         })
@@ -243,7 +243,7 @@ export default {
             this.debouncer(() => {
                 this.$emit('show-form', true)
             })
-            Vue.nextTick(() => this.close())   
+            Vue.nextTick(() => this.close())
         },
 
         /**

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+    - name: Ask a Question
+      url: https://github.com/DenisJunio/nova-create-or-add/discussions/new
+      about: Ask for help
+    - name: Feature Request
+      url: https://github.com/DenisJunio/nova-create-or-add/issues/new
+      about: Share ideas for new features

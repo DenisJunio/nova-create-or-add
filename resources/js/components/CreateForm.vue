@@ -2,7 +2,7 @@
     <div class="nested-field">
         <!-- HEADING -->
         <div class="p-4 text-90 border-b border-40 flex justify-between items-center bg-30">
-            <h1 class="font-normal text-xl capitalize">{{__('Create New')}} {{ field.singularLabel }}</h1>
+            <h1 class="font-normal text-xl capitalize">{{ __('Create New') }} {{ field.singularLabel }}</h1>
             <div class="flex justify-between items-center">
                 <button type="button" @click="hideForm">
                     X
@@ -24,16 +24,16 @@
         <!-- ACTUAL FIELDS -->
 
         <!-- Create Button -->
-            <div class="bg-30 flex px-8 py-4">
-                <button type="button" dusk="create-test-button" class="btn btn-default btn-primary">
-                    {{__('Create')}} {{ field.singularLabel }}
-                </button>
-            </div>
+        <div class="bg-30 flex px-8 py-4">
+            <button type="button" dusk="create-test-button" class="btn btn-default btn-primary">
+                {{ __('Create') }} {{ field.singularLabel }}
+            </button>
+        </div>
     </div>
 </template>
 
 <script>
-import { FormField, HandlesValidationErrors } from 'laravel-nova'
+import {FormField, HandlesValidationErrors} from 'laravel-nova'
 
 export default {
     mixins: [HandlesValidationErrors, FormField],
@@ -68,7 +68,7 @@ export default {
 
     methods: {
         /**
-         * This toggles the visibility of the 
+         * This toggles the visibility of the
          * content of the related resource
          */
         toggleVisibility() {

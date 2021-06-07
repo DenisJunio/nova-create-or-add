@@ -1,10 +1,10 @@
 <?php
 
-namespace Shivanshrajpoot\NovaCreateOrAdd;
+namespace DenisJunio\NovaCreateOrAdd;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
 class FieldServiceProvider extends ServiceProvider
 {
@@ -19,15 +19,5 @@ class FieldServiceProvider extends ServiceProvider
             Nova::script('nova-create-or-add', __DIR__.'/../dist/js/field.js');
             Nova::style('nova-create-or-add', __DIR__.'/../dist/css/field.css');
         });
-    }
-
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
     }
 }

@@ -1,5 +1,5 @@
 {
-    "name": "shivanshrajpoot/nova-create-or-add",
+    "name": "denisjunio/nova-create-or-add",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
@@ -7,17 +7,22 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "laravel/nova": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "7.1"
     },
     "autoload": {
         "psr-4": {
-            "Shivanshrajpoot\\NovaCreateOrAdd\\": "src/"
+            "DenisJunio\\NovaCreateOrAdd\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Shivanshrajpoot\\NovaCreateOrAdd\\FieldServiceProvider"
+                "DenisJunio\\NovaCreateOrAdd\\FieldServiceProvider"
             ]
         }
     },

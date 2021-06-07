@@ -11,7 +11,7 @@ export default {
     },
 
     createNewResource(resourceName, fieldAttribute, params){
-        return Nova.request().post(`/nova-api/${resourceName}`)
+        return Nova.request().post(`/nova-api/${resourceName}`, params)
     },
 
     getFormFields(resourceName){

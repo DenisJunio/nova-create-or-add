@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import { HandlesValidationErrors, Errors } from 'laravel-nova'
+import {Errors, HandlesValidationErrors} from 'laravel-nova'
 
 export default {
-    mixins: [HandlesValidationErrors],
+    mixins: [HandlesValidationErrors, Errors],
 
     props: {
         field: { type: Object, required: true },

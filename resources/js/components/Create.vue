@@ -11,7 +11,7 @@
                     <validation-errors :errors="validationErrors"/>
 
                     <!-- Fields -->
-                    <div v-for="field in fields">
+                    <div v-for="(field, index) in fields" :key="index">
                         <component
                             :is="'form-' + field.component"
                             :errors="validationErrors"
@@ -101,7 +101,7 @@ export default {
                 `/nova-api/${resourceUri}/creation-fields`
             )
 
-            this.fields = fields
+            this.fields = (fields.fields ? fields.fields : fields)
             this.loading = false
         },
 
@@ -120,8 +120,8 @@ export default {
                 )
 
                 this.$emit('hide-form')
-                var value = response.data['id']
-                var display = response.data[this.field.title]
+                let value = response.data['id']
+                let display = response.data.resource[this.field.title]
                 this.$emit('select-created', {value:value, display:display})
 
 
@@ -150,12 +150,9 @@ export default {
                 _.each(this.fields, field => {
                     field.fill(formData)
                 })
-
                 formData.append('viaResource', this.viaResource)
                 formData.append('viaResourceId', this.viaResourceId)
                 formData.append('viaRelationship', this.viaRelationship)
-
-
             })
         },
 
@@ -166,7 +163,6 @@ export default {
 
     computed: {
         singularName() {
-
             return this.field.singularLabel
         },
 

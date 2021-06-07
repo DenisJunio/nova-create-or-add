@@ -71,8 +71,9 @@
                 </label>
             </div>
 
-            <Create 
+            <Create
                 v-if="shouldShowForm"
+                :resource-name="field.belongsToResourceName"
                 :field="field"
                 :parent="field"
                 :errors="errors"
@@ -108,15 +109,16 @@ export default {
 
     data: () => ({
         availableResources: [],
+        belongsToResourceName: '',
+        fields: [],
         initializingWithExistingResource: false,
-        selectedResource: null,
         newResource: null,
+        search: '',
+        selectedResource: null,
         selectedResourceId: null,
+        shouldShowForm: false,
         softDeletes: false,
         withTrashed: false,
-        search: '',
-        shouldShowForm: false,
-        fields: [],
     }),
 
     /**
@@ -129,6 +131,7 @@ export default {
     methods: {
         initializeComponent() {
             this.withTrashed = false
+            this.belongsToResourceName = this.field.belongsToResourceName
 
             // If a user is editing an existing resource with this relation
             // we'll have a belongsToId on the field, and we should prefill
@@ -254,7 +257,8 @@ export default {
 
         selectCreatedResource(resource){
             this.availableResources = [resource]
-            this.selectedResource = resource
+            this.selectedResourceId = resource.value
+            this.selectInitialResource()
         }
     },
 
