@@ -1,10 +1,10 @@
-# A Nova field to replace BelongsTo field for on the go resource creation.
+# 🚧 WIP - A Nova field to replace BelongsTo field for on the go resource creation.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/denisjunio/nova-create-or-add.svg?style=flat-square)](https://packagist.org/packages/shivanshrajpoot/nova-create-or-add)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/denisjunio/nova-create-or-add.svg?style=flat-square)](https://packagist.org/packages/denisjunio/nova-create-or-add)
 ![CircleCI branch](https://img.shields.io/circleci/project/github/DenisJunio/nova-create-or-add/master.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/denisjunio/nova-create-or-add/master.svg?style=flat-square)](https://travis-ci.org/shivanshrajpoot/nova-create-or-add)
-[![Quality Score](https://img.shields.io/scrutinizer/g/denisjunio/nova-create-or-add.svg?style=flat-square)](https://scrutinizer-ci.com/g/shivanshrajpoot/nova-create-or-add)
-[![Total Downloads](https://img.shields.io/packagist/dt/denisjunio/nova-create-or-add.svg?style=flat-square)](https://packagist.org/packages/shivanshrajpoot/nova-create-or-add)
+[![Build Status](https://img.shields.io/travis/denisjunio/nova-create-or-add/master.svg?style=flat-square)](https://travis-ci.org/denisjunio/nova-create-or-add)
+[![Quality Score](https://img.shields.io/scrutinizer/g/denisjunio/nova-create-or-add.svg?style=flat-square)](https://scrutinizer-ci.com/g/denisjunio/nova-create-or-add)
+[![Total Downloads](https://img.shields.io/packagist/dt/denisjunio/nova-create-or-add.svg?style=flat-square)](https://packagist.org/packages/denisjunio/nova-create-or-add)
 
 Form Field 
 ![Screenshot Field](https://github.com/DenisJunio/nova-create-or-add/raw/master/nova-create-or-add-form.png)
